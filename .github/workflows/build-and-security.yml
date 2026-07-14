@@ -100,7 +100,7 @@ jobs:
       - name: nvidia-scan
         id: nvidia_scan
         env:
-          NVIDIA_API_KEY: ${{ secrets.NVIDIAAPIKEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           SYSTEM_PROMPT_FILE: .claude/agents/vulnerability-scanner.md
           MAX_SECTION_RETRIES: "3"
           MAX_CONTINUATIONS: "3"
@@ -607,7 +607,7 @@ jobs:
       - name: nvidia-remediate
         id: nvidia_remediate
         env:
-          NVIDIA_API_KEY: ${{ secrets.NVIDIAAPIKEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           SYSTEM_PROMPT_FILE: .claude/agents/vulnerability-remediator.md
           MAX_REM_RETRIES: "3"
           MAX_CONTINUATIONS: "4"
