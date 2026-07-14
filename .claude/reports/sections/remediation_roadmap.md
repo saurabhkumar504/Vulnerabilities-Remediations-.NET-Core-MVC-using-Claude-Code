@@ -1,6 +1,7 @@
 # Priority Remediation Roadmap
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ### Phase 1 – Critical
 
 1. **VULN-001**: Implement proper input validation and sanitization for user comments to prevent stored XSS attacks. Use a whitelist approach to only allow specific HTML tags and attributes. Consider using a library like HtmlSanitizer to simplify the process.
@@ -45,5 +46,35 @@
 1. Implement the remediation steps for the Critical and High-severity vulnerabilities (VULN-001 to VULN-004).
 2. Conduct a thorough code review to identify and address any additional security vulnerabilities.
 3. Perform a security audit and penetration testing to validate the effectiveness of the remediation steps.
+~~~
+>>>>>>> Stashed changes
+=======
+### Phase 1 – Critical
+
+1. **VULN-001**: Update `./OWASPDotNetLab/Views/Comments/Index.cshtml` to use `Html.Encode` instead of `Html.Raw` to prevent stored XSS attacks. Ensure all user-generated content is properly sanitized and encoded.
+2. **VULN-002**: Modify `./OWASPDotNetLab/Controllers/ProductController.cs` to use parameterized queries instead of concatenating user input into SQL queries. This will prevent SQL injection attacks.
+3. **VULN-003**: Update `./OWASPDotNetLab/Controllers/VulnerabilityController.cs` to use a secure deserialization mechanism, such as `JsonSerializer` with a `JsonSerializerSettings` object that has `TypeNameHandling` set to `None`. This will prevent insecure deserialization attacks.
+
+### Phase 2 – High
+
+1. **VULN-004**: Update `./OWASPDotNetLab/Controllers/UploadController.cs` to validate and restrict file uploads to prevent unrestricted file upload vulnerabilities. Implement proper file type and size checks.
+2. **VULN-005**: Modify `./OWASPDotNetLab/Controllers/SSRFController.cs` to validate and sanitize user input to prevent server-side request forgery attacks. Implement proper URL validation and whitelisting.
+3. **VULN-006**: Update `./OWASPDotNetLab/appsettings.json` to remove hardcoded secrets and API keys. Use environment variables or a secure secrets management system instead.
+
+### Phase 3 – Medium
+
+1. **VULN-007**: Update `./OWASPDotNetLab/Program.cs` to configure the application to use a secure development exception page instead of the default developer exception page. This will prevent information disclosure vulnerabilities.
+2. **VULN-008**: Modify `./OWASPDotNetLab/Controllers/AdminController.cs` to implement proper authorization and access control checks to prevent broken access control vulnerabilities.
+3. **VULN-009**: Update `./OWASPDotNetLab/Models/User.cs` to use a secure password hashing mechanism, such as `PasswordHasher`, to prevent plaintext password storage vulnerabilities.
+
+### Phase 4 – Low
+
+1. **VULN-010**: Update `./OWASPDotNetLab/Controllers/AuthController.cs` to implement proper rate limiting and lockout policies to prevent brute-force attacks.
+
+## Next Steps
+
+1. Implement the critical remediation steps (VULN-001 to VULN-003) immediately to address the most severe vulnerabilities.
+2. Conduct a thorough code review to identify and address any additional vulnerabilities that may not have been detected during this assessment.
+3. Schedule regular security assessments and penetration testing to ensure the application remains secure and up-to-date with the latest security patches and best practices.
 ~~~
 >>>>>>> Stashed changes

@@ -1,9 +1,15 @@
 # Risk Matrix
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+The risk matrix is a table that maps the severity of each vulnerability to its likelihood of occurrence. The methodology used to create this matrix is based on the CWE and OWASP Top 10 categories, as well as the severity and likelihood of each vulnerability.
+
+>>>>>>> Stashed changes
 | Severity | Count |
 | --- | --- |
 | Critical | 2 |
 | High | 2 |
+<<<<<<< Updated upstream
 | Medium | 3 |
 | Low | 3 |
 | Total | 10 |
@@ -18,6 +24,11 @@ The risk matrix below is based on the findings from the vulnerability assessment
 | High | 2 |
 | Medium | 3 |
 | Low | 2 |
+| Total | 10 |
+>>>>>>> Stashed changes
+=======
+| Medium | 5 |
+| Low | 1 |
 | Total | 10 |
 >>>>>>> Stashed changes
 ~~~
